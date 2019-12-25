@@ -1,2 +1,3 @@
-# revolve
-Out-of-Order RISC-V core
+# Revolve
+
+An out-of-order RISC-V core
