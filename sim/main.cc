@@ -4,8 +4,11 @@
 
 #include "Vrevolve.h"
 #include "Vrevolve_revolve.h"
-#include "Vrevolve_instr_fetch2.h"
+#include "Vrevolve_instr_fetch.h"
+#include "Vrevolve_instr_tlb.h"
+#include "Vrevolve_instr_cache_tag.h"
 #include "Vrevolve_instr_cache_data.h"
+
 
 
 Vrevolve *top = nullptr;
@@ -25,7 +28,7 @@ static void simulate()
 {
     while (!Verilated::gotFinish()) {
         std::cout << "[Cycle " << cycles << "] "
-            << "Paddr @ " << std::hex << top->revolve->if2->icache_data->i_paddr << std::dec << std::endl;
+            << "Vaddr @ " << std::hex << top->revolve->if1->icache_data->i_vaddr << std::dec << std::endl;
         
         top->i_clk = 1;
         top->eval();

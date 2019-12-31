@@ -1,3 +1,4 @@
 # Revolve
 
-An out-of-order RISC-V core
+An out-of-order superscalar RISC-V core
+
